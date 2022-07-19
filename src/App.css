@@ -1,0 +1,56 @@
+@import 'normalize.css';
+
+.App {
+  background-image: url('asset/image/BG2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  width: 80%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.random-info {
+  display: flex !important;
+  justify-content: space-around !important;
+  width: 100%;
+}
+
+.random-info__name,
+.random-info__question {
+  padding: 10px;
+  color: rgb(148, 35, 27);
+}
+
+/* 
+.random-info__name {
+  border-right: 2px solid rgb(148, 35, 27);
+} */
+
+.question-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading {
+  margin: 30px 0;
+  text-align: center;
+  width: 100%;
+}
