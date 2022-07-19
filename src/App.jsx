@@ -1,17 +1,19 @@
-import './App.css';
-import ButtonGroup from './component/button/ButtonGroup';
-import QuestionScreen from './component/QuestionScreen';
-import { useContext } from 'react';
-import { AppContext } from './component/store/store';
+import "./App.css";
+import ButtonGroup from "./component/button/ButtonGroup";
+import QuestionScreen from "./component/QuestionScreen";
+import { useContext } from "react";
+import { AppContext } from "./component/store/store";
+import Title from "./component/Title";
 
 function App() {
-  const { isLoading } = useContext(AppContext);
-  console.log('Loading: ', isLoading);
+  const { isFetch } = useContext(AppContext);
+  // console.log("Loading: ", isLoading);
   return (
-    <div className='App'>
-      <div className='container'>
+    <div className="App">
+      <div className="container">
+        <Title />
         <ButtonGroup />
-        <QuestionScreen />
+        {isFetch && <QuestionScreen />}
       </div>
     </div>
   );
