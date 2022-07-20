@@ -1,20 +1,16 @@
 import "./App.css";
-import ButtonGroup from "./component/button/ButtonGroup";
-import QuestionScreen from "./component/QuestionScreen";
-import { useContext } from "react";
-import { AppContext } from "./component/store/store";
-import Title from "./component/Title";
+import { Routes, Route } from "react-router-dom";
+import HomeScreen from "./component/HomeScreen";
+import RandomScreen from "./component/RandomScreen";
 
 function App() {
-  const { isFetch } = useContext(AppContext);
   // console.log("Loading: ", isLoading);
   return (
-    <div className="App">
-      <div className="container">
-        <Title />
-        <ButtonGroup />
-        {isFetch && <QuestionScreen />}
-      </div>
+    <div className="main">
+      <Routes>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/random" element={<RandomScreen />} />
+      </Routes>
     </div>
   );
 }

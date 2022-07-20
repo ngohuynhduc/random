@@ -58,7 +58,7 @@ const Question = () => {
           {`${randomedQuestion?.questionContent}`}
           {randomedQuestion?.id === "1" && (
             <div className="question1__image">
-              <img src={cau1} alt="q" className="question1__img" />
+              <img src={cau1} alt="q" className="question1__img" width="100%" />
             </div>
           )}
         </div>
@@ -68,7 +68,7 @@ const Question = () => {
     <>
       <h2>Hết câu hỏi rùi :( </h2>
       <div className="question">
-        <img src={sad} alt="sad" className="question__img--sad" />
+        <img src={sad} alt="sad" className="question__img--sad" width="100%" />
       </div>
     </>
   );
